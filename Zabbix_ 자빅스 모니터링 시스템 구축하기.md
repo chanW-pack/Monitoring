@@ -40,12 +40,12 @@ Zabbix는 엔터프라이즈에 대응한 모니터링 솔루션이며, 오픈 �
 
 환경 구성은 Zabbix Server, Linux Client, Windows Client로 구성했다.
 
-![Untitled](%5BZABBIX%5D%20%E1%84%8C%E1%85%A1%E1%84%87%E1%85%B5%E1%86%A8%E1%84%89%E1%85%B3%20%E1%84%86%E1%85%A9%E1%84%82%E1%85%B5%E1%84%90%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%89%E1%85%B5%E1%84%89%E1%85%B3%E1%84%90%E1%85%A6%E1%86%B7%20%E1%84%80%E1%85%AE%E1%84%8E%E1%85%AE%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%2005223c20ff0545c0a807c54489f26c9c/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/84123877/178692043-cd2d9d55-43f7-4903-b20b-3a8b89696fa0.png)
 
 > Server 설정이 완료된 후 Client들에게 Agent 설치를 진행하기 위해 AWS를 이용해서 총 3대로 구성하였다.
 > 
 
-![Untitled](%5BZABBIX%5D%20%E1%84%8C%E1%85%A1%E1%84%87%E1%85%B5%E1%86%A8%E1%84%89%E1%85%B3%20%E1%84%86%E1%85%A9%E1%84%82%E1%85%B5%E1%84%90%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%89%E1%85%B5%E1%84%89%E1%85%B3%E1%84%90%E1%85%A6%E1%86%B7%20%E1%84%80%E1%85%AE%E1%84%8E%E1%85%AE%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%2005223c20ff0545c0a807c54489f26c9c/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/84123877/178692009-96ff0eb7-3eb0-4835-980e-b8494cbbf3c6.png)
 
 ## Zabbix Server 설치
 
@@ -67,7 +67,7 @@ apt install -y ntp // 서버 동기화를 위한 ntp 설치
 vi /etc/ntp.conf // ntp.conf 수정
 ```
 
-![Untitled](%5BZABBIX%5D%20%E1%84%8C%E1%85%A1%E1%84%87%E1%85%B5%E1%86%A8%E1%84%89%E1%85%B3%20%E1%84%86%E1%85%A9%E1%84%82%E1%85%B5%E1%84%90%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%89%E1%85%B5%E1%84%89%E1%85%B3%E1%84%90%E1%85%A6%E1%86%B7%20%E1%84%80%E1%85%AE%E1%84%8E%E1%85%AE%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%2005223c20ff0545c0a807c54489f26c9c/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/84123877/178692012-a8cb8f69-8698-4861-a64d-c6d2033ba76a.png)
 
 > 기존의 22~25 라인 주석 처리하고 26번 라인에 국내 서버인 time.bora.net을 추가 후 저장
 > 
@@ -77,7 +77,7 @@ service ntp restart
 ntpq -p // ntp 동작 확인
 ```
 
-![Untitled](%5BZABBIX%5D%20%E1%84%8C%E1%85%A1%E1%84%87%E1%85%B5%E1%86%A8%E1%84%89%E1%85%B3%20%E1%84%86%E1%85%A9%E1%84%82%E1%85%B5%E1%84%90%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%89%E1%85%B5%E1%84%89%E1%85%B3%E1%84%90%E1%85%A6%E1%86%B7%20%E1%84%80%E1%85%AE%E1%84%8E%E1%85%AE%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%2005223c20ff0545c0a807c54489f26c9c/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/84123877/178692016-b46624f0-a325-43f4-9c2d-51514ce67f41.png)
 
 ## Zabbix 설치
 
@@ -105,9 +105,9 @@ $ sudo service mysql start
 
 - Zabbix 관련 DB 설정
 
-![Untitled](%5BZABBIX%5D%20%E1%84%8C%E1%85%A1%E1%84%87%E1%85%B5%E1%86%A8%E1%84%89%E1%85%B3%20%E1%84%86%E1%85%A9%E1%84%82%E1%85%B5%E1%84%90%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%89%E1%85%B5%E1%84%89%E1%85%B3%E1%84%90%E1%85%A6%E1%86%B7%20%E1%84%80%E1%85%AE%E1%84%8E%E1%85%AE%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%2005223c20ff0545c0a807c54489f26c9c/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/84123877/178692019-acfc3f83-2f01-4c55-a94d-892bb9a3eee5.png)
 
-![Untitled](%5BZABBIX%5D%20%E1%84%8C%E1%85%A1%E1%84%87%E1%85%B5%E1%86%A8%E1%84%89%E1%85%B3%20%E1%84%86%E1%85%A9%E1%84%82%E1%85%B5%E1%84%90%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%89%E1%85%B5%E1%84%89%E1%85%B3%E1%84%90%E1%85%A6%E1%86%B7%20%E1%84%80%E1%85%AE%E1%84%8E%E1%85%AE%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%2005223c20ff0545c0a807c54489f26c9c/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/84123877/178692025-821b2444-e5f3-4473-af9d-b076ed94873e.png)
 
 ```sql
 CREATE DATABASE zabbix CHARACTER SET utf8 collate utf8_bin; // utf 8 설정
@@ -153,7 +153,7 @@ http://server_ip_or_name/zabbix
 
 </aside>
 
-![Untitled](%5BZABBIX%5D%20%E1%84%8C%E1%85%A1%E1%84%87%E1%85%B5%E1%86%A8%E1%84%89%E1%85%B3%20%E1%84%86%E1%85%A9%E1%84%82%E1%85%B5%E1%84%90%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%89%E1%85%B5%E1%84%89%E1%85%B3%E1%84%90%E1%85%A6%E1%86%B7%20%E1%84%80%E1%85%AE%E1%84%8E%E1%85%AE%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%2005223c20ff0545c0a807c54489f26c9c/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/84123877/178692030-0c158d70-98cb-435c-88a9-8c3104ef4398.png)
 
 ## 모니터링 할 서버에 Agent 설치
 
@@ -197,14 +197,14 @@ LANG=ko_KR.UTF-8
 LANGUAGE="ko_KR:ko:en_US:en"
 ```
 
-![Untitled](%5BZABBIX%5D%20%E1%84%8C%E1%85%A1%E1%84%87%E1%85%B5%E1%86%A8%E1%84%89%E1%85%B3%20%E1%84%86%E1%85%A9%E1%84%82%E1%85%B5%E1%84%90%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%89%E1%85%B5%E1%84%89%E1%85%B3%E1%84%90%E1%85%A6%E1%86%B7%20%E1%84%80%E1%85%AE%E1%84%8E%E1%85%AE%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%2005223c20ff0545c0a807c54489f26c9c/Untitled%207.png)
+![Untitled 7](https://user-images.githubusercontent.com/84123877/178692034-7575bf65-fc30-4340-852d-e4e684501054.png)
 
-![Untitled](%5BZABBIX%5D%20%E1%84%8C%E1%85%A1%E1%84%87%E1%85%B5%E1%86%A8%E1%84%89%E1%85%B3%20%E1%84%86%E1%85%A9%E1%84%82%E1%85%B5%E1%84%90%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%89%E1%85%B5%E1%84%89%E1%85%B3%E1%84%90%E1%85%A6%E1%86%B7%20%E1%84%80%E1%85%AE%E1%84%8E%E1%85%AE%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%2005223c20ff0545c0a807c54489f26c9c/Untitled%208.png)
+![Untitled 8](https://user-images.githubusercontent.com/84123877/178692037-2f8946c2-21af-4158-a22b-6c6ec00017ec.png)
 
 > ZBX 에 초록불이 들어오기까지 시간이 좀 걸린다…
 > 
 
-![Untitled](%5BZABBIX%5D%20%E1%84%8C%E1%85%A1%E1%84%87%E1%85%B5%E1%86%A8%E1%84%89%E1%85%B3%20%E1%84%86%E1%85%A9%E1%84%82%E1%85%B5%E1%84%90%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%89%E1%85%B5%E1%84%89%E1%85%B3%E1%84%90%E1%85%A6%E1%86%B7%20%E1%84%80%E1%85%AE%E1%84%8E%E1%85%AE%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%2005223c20ff0545c0a807c54489f26c9c/Untitled%209.png)
+![Untitled 9](https://user-images.githubusercontent.com/84123877/178692039-dc30e5b7-dc4a-4baa-9913-c6dfaf59fe3c.png)
 
 > 이렇게 메모리를 과부하시키니 바로 알림이 생성된다.
 > 
