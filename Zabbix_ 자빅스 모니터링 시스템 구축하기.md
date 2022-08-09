@@ -53,11 +53,29 @@ Zabbix는 엔터프라이즈에 대응한 모니터링 솔루션이며, 오픈 �
 
 Zabbix를 구성하기 위해서는 기본적인 설정이 필요하다.
 
-1. Apache 설치
+- 방화벽 오픈 정보
 
 ```bash
 apt install -y apache2 // 아파치 데몬 설치
 service apache2 start // 서비스 시작
+```
+
+- Server
+
+```bash
+10050 inbound source CLIENT_IP
+```
+
+- Client
+
+```bash
+
+
+1. Apache 설치
+
+```bash
+inbound open 10051 zabbix server port
+inbound open 10050 zabbix agent port
 ```
 
 1. ntp 설치 및 활성화
