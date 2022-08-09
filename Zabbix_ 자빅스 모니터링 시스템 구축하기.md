@@ -56,8 +56,8 @@ Zabbix를 구성하기 위해서는 기본적인 설정이 필요하다.
 - 방화벽 오픈 정보
 
 ```bash
-apt install -y apache2 // 아파치 데몬 설치
-service apache2 start // 서비스 시작
+inbound open 10051 zabbix server port
+inbound open 10050 zabbix agent port
 ```
 
 - Server
@@ -69,19 +69,17 @@ service apache2 start // 서비스 시작
 - Client
 
 ```bash
-
-
-1. Apache 설치
-
-```bash
-inbound open 10051 zabbix server port
-inbound open 10050 zabbix agent port
+10050 inbound/outbound source ZABBIX_SERVER_IP
 ```
 
-1. ntp 설치 및 활성화
+(Apache 설치가 되어있지 않다면 설치한다.)
+
+
+
+추가사항. ntp 설치 및 활성화
 
 ```bash
-apt install -y ntp // 서버 동기화를 위한 ntp 설치
+yum install -y ntp // 서버 동기화를 위한 ntp 설치
 vi /etc/ntp.conf // ntp.conf 수정
 ```
 
