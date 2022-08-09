@@ -72,7 +72,12 @@ $ 10050 inbound source CLIENT_IP
 $ 10050 inbound/outbound source ZABBIX_SERVER_IP
 ```
 
-(Apache 설치가 되어있지 않다면 설치한다.) </br>
+(Apache 설치가 되어있지 않다면 설치한다.) 
+
+```bash
+$ sudo yum install -y httpd
+$ sudo systemctl start httpd
+```
 
 추가사항. ntp 설치 및 활성화
 
