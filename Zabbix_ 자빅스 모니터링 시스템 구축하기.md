@@ -113,7 +113,7 @@ timedatectl set-timezone Asia/Seoul
 rpm -Uvh https://repo.zabbix.com/zabbix/5.0/rhel/7/x86_64/zabbix-release-5.0-1.el7.noarch.rpm
 ```
 
-2+. Amazon Linux 사용 시 범용적으로 사용되는 패키지가 누락 되어 있어 추가 설치 진행
+3. Amazon Linux 사용 시 범용적으로 사용되는 패키지가 누락 되어 있어 추가 설치 진행
 
 ```bash
 yum clean all
@@ -211,6 +211,18 @@ $ sudo zcat /usr/share/doc/zabbix-sql-scripts/mysql/server.sql.gz | mysql -uzabb
 
 => mysql password 입력
 ```
+
+Zabbix PHP 세팅
+
+```bash
+vi /etc/opt/rh/rh-php72/php-fpm.d/zabbix.conf
+
+
+## 아래 항목 추가
+> add listen acl user ",zabbix"
+> php_value[date.timezone] = Asia/Seoul
+```
+
 
 Zabbix config 셋팅
 
