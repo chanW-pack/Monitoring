@@ -56,20 +56,20 @@ Zabbix를 구성하기 위해서는 기본적인 설정이 필요하다.
 - 방화벽 오픈 정보
 
 ```bash
-inbound open 10051 zabbix server port
-inbound open 10050 zabbix agent port
+$ inbound open 10051 zabbix server port
+$ inbound open 10050 zabbix agent port
 ```
 
 - Server
 
 ```bash
-10050 inbound source CLIENT_IP
+$ 10050 inbound source CLIENT_IP
 ```
 
 - Client
 
 ```bash
-10050 inbound/outbound source ZABBIX_SERVER_IP
+$ 10050 inbound/outbound source ZABBIX_SERVER_IP
 ```
 
 (Apache 설치가 되어있지 않다면 설치한다.) </br>
@@ -77,8 +77,8 @@ inbound open 10050 zabbix agent port
 추가사항. ntp 설치 및 활성화
 
 ```bash
-yum install -y ntp // 서버 동기화를 위한 ntp 설치
-vi /etc/ntp.conf // ntp.conf 수정
+$ yum install -y ntp // 서버 동기화를 위한 ntp 설치
+$ vi /etc/ntp.conf // ntp.conf 수정
 ```
 
 ![Untitled 2](https://user-images.githubusercontent.com/84123877/178692012-a8cb8f69-8698-4861-a64d-c6d2033ba76a.png)
@@ -87,8 +87,8 @@ vi /etc/ntp.conf // ntp.conf 수정
 > 
 
 ```bash
-service ntp restart
-ntpq -p // ntp 동작 확인
+$ service ntp restart
+$ ntpq -p // ntp 동작 확인
 ```
 
 ![Untitled 3](https://user-images.githubusercontent.com/84123877/178692016-b46624f0-a325-43f4-9c2d-51514ce67f41.png)
@@ -104,37 +104,37 @@ Zabbix 구성을 위한 기본 설정이 완료되었다.
 1. Zabbix 서버의 타임존 맞추기
 
 ```bash
-timedatectl set-timezone Asia/Seoul
+$ timedatectl set-timezone Asia/Seoul
 ```
 
 2. Zabbix RPM Download
 
 ```bash
-rpm -Uvh https://repo.zabbix.com/zabbix/5.0/rhel/7/x86_64/zabbix-release-5.0-1.el7.noarch.rpm
+$ rpm -Uvh https://repo.zabbix.com/zabbix/5.0/rhel/7/x86_64/zabbix-release-5.0-1.el7.noarch.rpm
 ```
 
 3. Amazon Linux 사용 시 범용적으로 사용되는 패키지가 누락 되어 있어 추가 설치 진행
 
 ```bash
-yum clean all
+$ yum clean all
 
-rpm -Uvh https://rpmfind.net/linux/centos/7.9.2009/extras/x86_64/Packages/centos-release-scl-rh-2-3.el7.centos.noarch.rpm
+$ rpm -Uvh https://rpmfind.net/linux/centos/7.9.2009/extras/x86_64/Packages/centos-release-scl-rh-2-3.el7.centos.noarch.rpm
 
-rpm -Uvh https://rpmfind.net/linux/centos/7.9.2009/extras/x86_64/Packages/centos-release-scl-2-3.el7.centos.noarch.rpm
+$ rpm -Uvh https://rpmfind.net/linux/centos/7.9.2009/extras/x86_64/Packages/centos-release-scl-2-3.el7.centos.noarch.rpm
 ```
 
 4. install
 
 ```bash
-yum install zabbix-server-mysql zabbix-agent
+$ yum install zabbix-server-mysql zabbix-agent
 ```
 
 5. zabbix-frontend Repo Enable
 
 ```bash
-yum-config-manager --enable rhel-server-rhscl-7-rpms
+$ yum-config-manager --enable rhel-server-rhscl-7-rpms
 
-vi /etc/yum.repos.d/zabbix.repo
+$ vi /etc/yum.repos.d/zabbix.repo
 
 [zabbix]
 name=Zabbix Official Repository - $basearch
@@ -168,17 +168,17 @@ gpgcheck=1
 6. 주요 컴퍼넌트 설치
 
 ```bash
-yum install zabbix-web-mysql-scl zabbix-nginx-conf-scl
+$ yum install zabbix-web-mysql-scl zabbix-nginx-conf-scl
 
-yum install -y mariadb mariadb-server
+$ yum install -y mariadb mariadb-server
 ```
 
 설치 후 DB 서비스 시작, 활성화
 
 ```bash
-systemctl start mariadb
+$ systemctl start mariadb
 
-systemctl enable mariadb
+$ systemctl enable mariadb
 ```
 
 - Zabbix 관련 DB 설정
@@ -215,7 +215,7 @@ $ sudo zcat /usr/share/doc/zabbix-sql-scripts/mysql/server.sql.gz | mysql -uzabb
 Zabbix PHP 세팅
 
 ```bash
-vi /etc/opt/rh/rh-php72/php-fpm.d/zabbix.conf
+$ vi /etc/opt/rh/rh-php72/php-fpm.d/zabbix.conf
 
 
 ## 아래 항목 추가
@@ -229,11 +229,14 @@ Zabbix config 셋팅
 ```bash
 $ sudo vi /etc/zabbix/zabbix_server.conf
 
-**- zabbix_server.conf 아래 내용 추가 (맨 밑..)**
-DBPassword=<Mysql 설정한 패스워드>
+modify DBPassword=password
 
-$ sudo systemctl restart zabbix-server zabbix-agent apache2
-$ sudo systemctl enable zabbix-server zabbix-agent apache2
+# 서비스 재시작 및 등록
+$ systemctl restart zabbix-server zabbix-agent rh-nginx116-nginx rh-php72-php-fpm
+
+$ systemctl enable zabbix-server zabbix-agent rh-nginx116-nginx rh-php72-php-fpm mariadb
+
+$ systemctl status zabbix-server zabbix-agent rh-nginx116-nginx rh-php72-php-fpm mariadb
 ```
 
 <aside>
