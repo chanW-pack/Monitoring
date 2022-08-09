@@ -1,4 +1,4 @@
-# [ZABBIX] 자빅스 모니터링 시스템 구축하기
+# ABBIX 자빅스 모니터링 시스템 구축하기
 
 ---
 
@@ -72,9 +72,7 @@ inbound open 10050 zabbix agent port
 10050 inbound/outbound source ZABBIX_SERVER_IP
 ```
 
-(Apache 설치가 되어있지 않다면 설치한다.)
-
-
+(Apache 설치가 되어있지 않다면 설치한다.) </br>
 
 추가사항. ntp 설치 및 활성화
 
@@ -103,20 +101,84 @@ Zabbix 구성을 위한 기본 설정이 완료되었다.
 
 이제부터는 Zabbix 설치를 진행하겠다.
 
+1. Zabbix 서버의 타임존 맞추기
+
 ```bash
-$ sudo wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-1+ubuntu20.04_all.deb
-$ sudo dpkg -i zabbix-release_6.0-1+ubuntu20.04_all.deb
-
-$ sudo apt update
-
-$ sudo apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sql-scripts zabbix-agent
+timedatectl set-timezone Asia/Seoul
 ```
 
-설치 후 Mysql을 설치한다.
+2. Zabbix RPM Download
 
 ```bash
-$ sudo apt-get install mysql-server
-$ sudo service mysql start
+rpm -Uvh https://repo.zabbix.com/zabbix/5.0/rhel/7/x86_64/zabbix-release-5.0-1.el7.noarch.rpm
+```
+
+2+. Amazon Linux 사용 시 범용적으로 사용되는 패키지가 누락 되어 있어 추가 설치 진행
+
+```bash
+yum clean all
+
+rpm -Uvh https://rpmfind.net/linux/centos/7.9.2009/extras/x86_64/Packages/centos-release-scl-rh-2-3.el7.centos.noarch.rpm
+
+rpm -Uvh https://rpmfind.net/linux/centos/7.9.2009/extras/x86_64/Packages/centos-release-scl-2-3.el7.centos.noarch.rpm
+```
+
+4. install
+
+```bash
+yum install zabbix-server-mysql zabbix-agent
+```
+
+5. zabbix-frontend Repo Enable
+
+```bash
+yum-config-manager --enable rhel-server-rhscl-7-rpms
+
+vi /etc/yum.repos.d/zabbix.repo
+
+[zabbix]
+name=Zabbix Official Repository - $basearch
+baseurl=http://repo.zabbix.com/zabbix/5.0/rhel/7/$basearch/
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX-A14FE591
+
+[zabbix-frontend]
+name=Zabbix Official Repository frontend - $basearch
+baseurl=http://repo.zabbix.com/zabbix/5.0/rhel/7/$basearch/frontend
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX-A14FE591
+
+[zabbix-debuginfo]
+name=Zabbix Official Repository debuginfo - $basearch
+baseurl=http://repo.zabbix.com/zabbix/5.0/rhel/7/$basearch/debuginfo/
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX-A14FE591
+gpgcheck=1
+
+[zabbix-non-supported]
+name=Zabbix Official Repository non-supported - $basearch
+baseurl=http://repo.zabbix.com/non-supported/rhel/7/$basearch/
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX
+gpgcheck=1
+```
+
+6. 주요 컴퍼넌트 설치
+
+```bash
+yum install zabbix-web-mysql-scl zabbix-nginx-conf-scl
+
+yum install -y mariadb mariadb-server
+```
+
+설치 후 DB 서비스 시작, 활성화
+
+```bash
+systemctl start mariadb
+
+systemctl enable mariadb
 ```
 
 - Zabbix 관련 DB 설정
