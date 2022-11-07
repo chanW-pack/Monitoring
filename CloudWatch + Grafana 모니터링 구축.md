@@ -4,7 +4,7 @@
 
 ### CloudWatch
 
-[cloudwatch](https://github.com/chanW-pack/aws_study/blob/main/Week%203/3_5%20CloudWatch%20(AWS%20%EB%A6%AC%EC%86%8C%EC%8A%A4%20%EC%83%81%ED%83%9C%20%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81).md)
+https://github.com/chanW-pack/aws_study/blob/main/Week%203/3_5%20CloudWatch%20(AWS%20%EB%A6%AC%EC%86%8C%EC%8A%A4%20%EC%83%81%ED%83%9C%20%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81).md
 
 본인이 학습한 cloudwatch 개념 정리된 링크이다.
 
