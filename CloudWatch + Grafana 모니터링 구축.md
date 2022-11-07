@@ -22,7 +22,7 @@ EC2는 OS 수준의 memory사용량, 디스크 사용량 등의 지표는 제공
 cloudwatch 관련한 내용은 따로 학습하여 작성하겠다.
 ```
 
-![Untitled](CloudWatch%20+%20Grafana%20%E1%84%86%E1%85%A9%E1%84%82%E1%85%B5%E1%84%90%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%80%E1%85%AE%E1%84%8E%E1%85%AE%E1%86%A8%20fe8fe11cf25f41d9a458240aea53787d/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/84123877/200257481-8366b994-115b-45ae-959f-4ba73568b704.png)
 
 현재 실습용 ec2 3대가 실행중인 상태이다.
 
@@ -30,29 +30,29 @@ cloudwatch 대시보드 모니터링 생성과 그라파나 모니터링 생성�
 
 그라파나로 실습을 진행하도록 하겠다.
 
-![Untitled](CloudWatch%20+%20Grafana%20%E1%84%86%E1%85%A9%E1%84%82%E1%85%B5%E1%84%90%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%80%E1%85%AE%E1%84%8E%E1%85%AE%E1%86%A8%20fe8fe11cf25f41d9a458240aea53787d/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/84123877/200257452-38261bde-aa08-4bfa-be78-fd020def851a.png)
 
 aws 계정에 액세스 키를 사용하여 그라파나와 연동한다.
 
-![Untitled](CloudWatch%20+%20Grafana%20%E1%84%86%E1%85%A9%E1%84%82%E1%85%B5%E1%84%90%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%80%E1%85%AE%E1%84%8E%E1%85%AE%E1%86%A8%20fe8fe11cf25f41d9a458240aea53787d/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/84123877/200257460-83810fee-2750-4b40-bf1f-a26607d554bd.png)
 
 본인 개인 서버에 grafana를 올려놨다.
 
 Configuration → Add data source → cloudwatch 를 추가한다.
 
-![Untitled](CloudWatch%20+%20Grafana%20%E1%84%86%E1%85%A9%E1%84%82%E1%85%B5%E1%84%90%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%80%E1%85%AE%E1%84%8E%E1%85%AE%E1%86%A8%20fe8fe11cf25f41d9a458240aea53787d/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/84123877/200257467-07def6d0-c344-46d9-bca9-9c0a7f779e68.png)
 
-![Untitled](CloudWatch%20+%20Grafana%20%E1%84%86%E1%85%A9%E1%84%82%E1%85%B5%E1%84%90%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%80%E1%85%AE%E1%84%8E%E1%85%AE%E1%86%A8%20fe8fe11cf25f41d9a458240aea53787d/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/84123877/200257471-d8ded04b-3015-474a-9047-f7fc0099f5e3.png)
 
 save & test 를 선택하여 데이터 소스 활성을 확인한다.
 
-![Untitled](CloudWatch%20+%20Grafana%20%E1%84%86%E1%85%A9%E1%84%82%E1%85%B5%E1%84%90%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%80%E1%85%AE%E1%84%8E%E1%85%AE%E1%86%A8%20fe8fe11cf25f41d9a458240aea53787d/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/84123877/200257474-75ecc799-0cab-447d-a216-ab1d767a8a4b.png)
 
 이후 대시보드를 추가한다.
 
 cloudwatch에서 기본적으로 가져오는 지표값을 입력하면, 바로 그래프화된다.
 
-![Untitled](CloudWatch%20+%20Grafana%20%E1%84%86%E1%85%A9%E1%84%82%E1%85%B5%E1%84%90%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%20%E1%84%80%E1%85%AE%E1%84%8E%E1%85%AE%E1%86%A8%20fe8fe11cf25f41d9a458240aea53787d/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/84123877/200257477-6dcbc44d-fd9c-46a5-8cd2-c19ce41bd6ac.png)
 
 대략적으로 완성되었다.
 
