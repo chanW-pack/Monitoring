@@ -6,37 +6,37 @@
 
 ---
 
-![Untitled](Grafana%20Slack%20%E1%84%8B%E1%85%A7%E1%86%AB%E1%84%83%E1%85%A9%E1%86%BC%20f58db8c1ef1c446aaeed182eacdb7b9b/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/84123877/200572948-c5de12b9-fd04-4cf6-bc27-1e5b232405df.png)
 
-![Untitled](Grafana%20Slack%20%E1%84%8B%E1%85%A7%E1%86%AB%E1%84%83%E1%85%A9%E1%86%BC%20f58db8c1ef1c446aaeed182eacdb7b9b/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/84123877/200572952-37b4b48f-dac5-4120-822c-9fedaf3b6c5e.png)
 
 slack api에 접속하여, create new app을 진행한다.
 
-![Untitled](Grafana%20Slack%20%E1%84%8B%E1%85%A7%E1%86%AB%E1%84%83%E1%85%A9%E1%86%BC%20f58db8c1ef1c446aaeed182eacdb7b9b/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/84123877/200572954-f9d3891c-8e1c-402e-9680-ed1845ea8a72.png)
 
 from scartch을 선택한다. 이후 app name을 설정하고 연결할 slack workspace를 선택한다.
 
-![Untitled](Grafana%20Slack%20%E1%84%8B%E1%85%A7%E1%86%AB%E1%84%83%E1%85%A9%E1%86%BC%20f58db8c1ef1c446aaeed182eacdb7b9b/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/84123877/200572955-25f60854-5b76-4527-aa02-68f06b3ed1f0.png)
 
 좌측 Features 탭에서 OAuth & Permissions을 선택한다.
 
-![2022-11-07 18 36 34.png](Grafana%20Slack%20%E1%84%8B%E1%85%A7%E1%86%AB%E1%84%83%E1%85%A9%E1%86%BC%20f58db8c1ef1c446aaeed182eacdb7b9b/2022-11-07_18_36_34.png)
+![2022-11-07_18_36_34](https://user-images.githubusercontent.com/84123877/200572950-975a9de9-f4e6-4ad7-b9a0-f110dc67888d.png)
 
 설치를 진행한다. 관리자 권한이 필요하다.
 
-![Untitled](Grafana%20Slack%20%E1%84%8B%E1%85%A7%E1%86%AB%E1%84%83%E1%85%A9%E1%86%BC%20f58db8c1ef1c446aaeed182eacdb7b9b/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/84123877/200572928-a3ec36b7-75e0-489a-bad0-6ab81287b10b.png)
 
 이후 슬랙 api를 통해 메세지와 그래프이미지 등을 전송할 것이기 때문에, 
 
 files:wirte , chat:wirte 권한을 추가한다.
 
-![Untitled](Grafana%20Slack%20%E1%84%8B%E1%85%A7%E1%86%AB%E1%84%83%E1%85%A9%E1%86%BC%20f58db8c1ef1c446aaeed182eacdb7b9b/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/84123877/200572937-4ee2fb35-b656-4f8c-80eb-fb91f730087a.png)
 
 이후, 생성된 토큰값을 복사하여 
 
 grafana → alerting → contact point를 생성한다.
 
-![Untitled](Grafana%20Slack%20%E1%84%8B%E1%85%A7%E1%86%AB%E1%84%83%E1%85%A9%E1%86%BC%20f58db8c1ef1c446aaeed182eacdb7b9b/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/84123877/200572940-49358c4d-54d9-4ba7-a031-8b62c09316ea.png)
 
 생성된 contact point에 대한 라우팅 설정을 진행해야 하는데,
 
@@ -50,7 +50,7 @@ root policy의 경우 모든 알림에 대한 내용이 전달되고,
 
  ****
 
-![Untitled](Grafana%20Slack%20%E1%84%8B%E1%85%A7%E1%86%AB%E1%84%83%E1%85%A9%E1%86%BC%20f58db8c1ef1c446aaeed182eacdb7b9b/Untitled%207.png)
+![Untitled 7](https://user-images.githubusercontent.com/84123877/200572944-8065b1ec-8942-4cb1-af35-2f6e9fd2a2f8.png)
 
 본인은 알람 대시보드를 group 틀로 나누어 name을 설정하였다.
 
@@ -58,7 +58,7 @@ root policy의 경우 모든 알림에 대한 내용이 전달되고,
 
  
 
-![Untitled](Grafana%20Slack%20%E1%84%8B%E1%85%A7%E1%86%AB%E1%84%83%E1%85%A9%E1%86%BC%20f58db8c1ef1c446aaeed182eacdb7b9b/Untitled%208.png)
+![Untitled 8](https://user-images.githubusercontent.com/84123877/200572945-a7ea44f0-37fb-4ca4-a1b2-6d3f3f089fb8.png)
 
 ### 여러 서비스 slack 연결 충돌 이슈
 
