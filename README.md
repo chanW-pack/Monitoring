@@ -9,7 +9,7 @@
 - [Scouter 설치 및 Agent 연동](https://github.com/chanW-pack/Monitoring/blob/main/Linux%20Scouter%20%EC%84%A4%EC%B9%98%20%EB%B0%8F%20Agent%20%EC%97%B0%EB%8F%99.md)
 
 ## Prometheus
-
+![promethus](https://user-images.githubusercontent.com/84123877/200781352-02720582-ad6a-4c9a-ab5e-8f6d1bb03c08.png)
 - [Prometheus + Grafana 모니터링 구축](https://github.com/chanW-pack/Monitoring/blob/main/Prometheus%20%2B%20Grafana%20%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%20%EA%B5%AC%EC%B6%95.md)
 
 ## CloudWatch
