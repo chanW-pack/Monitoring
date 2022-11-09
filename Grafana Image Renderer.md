@@ -22,7 +22,7 @@
 $ grafana-cli plugins install grafana-image-renderer
 ```
 
-![Untitled](Grafana%20Image%20Renderer%20ba38edf25a5045c4bf2061b746ea1bdb/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/84123877/200779834-78329b6a-92dc-4ed5-8bf4-75bc5d764984.png)
 
 ### 2. 독립실행형으로 설치
 
@@ -249,7 +249,7 @@ spec:
 1. 그라파나 Alerting → Notification channerls → add channel
 2. 이미지처럼 입력
 
-![Untitled](Grafana%20Image%20Renderer%20ba38edf25a5045c4bf2061b746ea1bdb/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/84123877/200779827-f79b09fa-b92c-412d-a310-73da9c03d432.png)
 
 1. Name: 자유롭게 입력Type: SlackDefault: true로 키게되면 알럿할 채널의 기본값이 된다.Include Image: 이미지 전송을 위해 켜야한다.경고문구 없이 켜져야 렌더러 설치와 설정이 잘된것이다.Slack SettingUrl: https://slack.com/api/chat.postMessageRecipient: #grafana-alertToken: 슬랙설정에서 발급받은 토큰 입력
 2. Send Test로 메세지가 오는지 확인한다.
