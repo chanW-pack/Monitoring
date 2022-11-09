@@ -11,7 +11,7 @@ grafana Alerting Slack 연동 실 적용 완료 ! </br>
 11.08 - 해결 완료 ! </br>
 - [Grafana Image Renderer](https://github.com/chanW-pack/Monitoring/blob/main/Grafana%20Image%20Renderer.md) </br>
 slack에 보내지는 경고 메세지를 커스텀마이징 하고싶음. </br>
-임계치를 넘은 순간의 그래프 이미지를 메세지로 같이 보내는 기능  </br>
+임계치를 넘은 순간의 그래프 이미지를 메세지로 같이 보내는 기능   </br>
 
 ## Zabbix
 ![zabbix](https://user-images.githubusercontent.com/84123877/200781041-805cb412-bde1-4c94-9db2-d3754466b292.png)
