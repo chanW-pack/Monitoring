@@ -5,13 +5,13 @@
 - [CloudWatch + Grafana 모니터링 구축](https://github.com/chanW-pack/Monitoring/blob/main/CloudWatch%20%2B%20Grafana%20%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%20%EA%B5%AC%EC%B6%95.md)
 cloudwatch 그라파나 연동
 
-- [Grafana Slack 연동](https://github.com/chanW-pack/Monitoring/blob/main/Grafana%20Slack%20%EC%97%B0%EB%8F%99.md)
-grafana Alerting Slack 연동 실 적용 완료 !
-한 grafana server에 여러개의 대시보드와 Contact points를 구축하여, 충돌하는 이슈 발생
-11.08 - 해결 완료 !
-- [Grafana Image Renderer](https://github.com/chanW-pack/Monitoring/blob/main/Grafana%20Image%20Renderer.md)
-slack에 보내지는 경고 메세지를 커스텀마이징 하고싶음.
-임계치를 넘은 순간의 그래프 이미지를 메세지로 같이 보내는 기능 
+- [Grafana Slack 연동](https://github.com/chanW-pack/Monitoring/blob/main/Grafana%20Slack%20%EC%97%B0%EB%8F%99.md) </br>
+grafana Alerting Slack 연동 실 적용 완료 ! </br>
+한 grafana server에 여러개의 대시보드와 Contact points를 구축하여, 충돌하는 이슈 발생 </br>
+11.08 - 해결 완료 ! </br>
+- [Grafana Image Renderer](https://github.com/chanW-pack/Monitoring/blob/main/Grafana%20Image%20Renderer.md) </br>
+slack에 보내지는 경고 메세지를 커스텀마이징 하고싶음. </br>
+임계치를 넘은 순간의 그래프 이미지를 메세지로 같이 보내는 기능  </br>
 
 ## Zabbix
 ![zabbix](https://user-images.githubusercontent.com/84123877/200781041-805cb412-bde1-4c94-9db2-d3754466b292.png)
