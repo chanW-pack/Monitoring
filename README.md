@@ -23,6 +23,7 @@ slack에 보내지는 경고 메세지를 커스텀마이징 하고싶음. </br>
 
 ## Prometheus
 ![promethus](https://user-images.githubusercontent.com/84123877/200781352-02720582-ad6a-4c9a-ab5e-8f6d1bb03c08.png)
-- [Prometheus + Grafana 모니터링 구축](https://github.com/chanW-pack/Monitoring/blob/main/Prometheus%20%2B%20Grafana%20%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%20%EA%B5%AC%EC%B6%95.md)
+- [Prometheus + Grafana 모니터링 구축](https://github.com/chanW-pack/Monitoring/blob/main/Prometheus%20%2B%20Grafana%20%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%20%EA%B5%AC%EC%B6%95.md) </br>
+Prometheus 및 Grafana, docker 활용하여 container 이미지로 구축. 
 
 
