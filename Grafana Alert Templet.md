@@ -2,7 +2,7 @@
 
 ---
 
-![Untitled](Grafana%20Alert%20Templet%20094fb6e0924d4d7bb6a079171f636b9f/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/84123877/204981070-45328f8c-d2ce-43ac-a66a-636f582eecfe.png)
 
 기존 기본 메시지 형식은 가독성이 매우 나빴다.
 
@@ -13,13 +13,13 @@
 
 중, 두 번째의 방법인 grafana alert 수정 방식으로 진행해보았다.
 
-![Untitled](Grafana%20Alert%20Templet%20094fb6e0924d4d7bb6a079171f636b9f/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/84123877/204981061-15f174d3-e110-4bc3-bf22-0c2afceb7a2e.png)
 
 기본적은 템플릿으로는 , 크게 Value, Labels, Annotations 로 나뉘게되는데
 
 각각 이름 그대로 정보 값, 해당 알림의 라벨, 주석 정도로 생각하면 된다.
 
-![Untitled](Grafana%20Alert%20Templet%20094fb6e0924d4d7bb6a079171f636b9f/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/84123877/204981064-11150afc-a351-42ee-9ff7-a1e8498be5cb.png)
 
 일단, Value, Labels 를 제외한 Annotations 만 출력하고, 해당 Annotations에 내가 필요한 값들을 추가시켜 구현하였다.
 
@@ -29,7 +29,7 @@
 
 ## Slack Firing, Resolved 메세지 분할
 
-![Untitled](Grafana%20Alert%20Templet%20094fb6e0924d4d7bb6a079171f636b9f/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/84123877/204981067-5b2c6061-033f-41c2-8a45-e33baa2602f2.png)
 
 현재, 메트릭값이 임계치를 넘어서게 되면, Firing 경고 알람이 발송되고, 메트릭값이 정상화가 되면 Resolved 메세지를 전송하여 정상화의 알람까지 구현하였다.
 
@@ -238,7 +238,7 @@ Labels:
 
 즉 contact point에서는 cwzzang 템플릿만 불러오면 정상 작동이 된다.
 
-![Untitled](Grafana%20Alert%20Templet%20094fb6e0924d4d7bb6a079171f636b9f/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/84123877/204981068-e510f684-00f4-423e-b6ff-041b888b65f7.png)
 
 작동을 확인하였다.
 
