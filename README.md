@@ -15,6 +15,7 @@ slack에 보내지는 경고 메세지를 커스텀마이징 하고싶음. </br>
 
 - [Grafana Alert Templet](https://github.com/chanW-pack/Monitoring/blob/main/Grafana%20Alert%20Templet.md)  
 grafana alert -> slack 메세지 템플릿 구현  
+및, firing/resolved 상태 구분하여 메세지 전송 (if 문)  
 ![Untitled 4](https://user-images.githubusercontent.com/84123877/204981068-e510f684-00f4-423e-b6ff-041b888b65f7.png)
 
 ## Zabbix
