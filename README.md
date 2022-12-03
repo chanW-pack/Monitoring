@@ -13,6 +13,9 @@ grafana Alerting Slack 연동 실 적용 완료 ! </br>
 slack에 보내지는 경고 메세지를 커스텀마이징 하고싶음. </br>
 임계치를 넘은 순간의 그래프 이미지를 메세지로 같이 보내는 기능 조사 </br>
 
+- [Grafana Alert Templet](https://github.com/chanW-pack/Monitoring/blob/main/Grafana%20Alert%20Templet.md)  
+grafana alert -> slack  
+
 ## Zabbix
 ![zabbix](https://user-images.githubusercontent.com/84123877/200781041-805cb412-bde1-4c94-9db2-d3754466b292.png)
 - [ZABBIX 자빅스 모니터링 시스템 구축하기](https://github.com/chanW-pack/Monitoring/blob/main/Zabbix_%20%EC%9E%90%EB%B9%85%EC%8A%A4%20%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0.md)
