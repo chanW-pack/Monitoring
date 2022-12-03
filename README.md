@@ -14,7 +14,8 @@ slack에 보내지는 경고 메세지를 커스텀마이징 하고싶음. </br>
 임계치를 넘은 순간의 그래프 이미지를 메세지로 같이 보내는 기능 조사 </br>
 
 - [Grafana Alert Templet](https://github.com/chanW-pack/Monitoring/blob/main/Grafana%20Alert%20Templet.md)  
-grafana alert -> slack  
+grafana alert -> slack 메세지 템플릿 구현
+![Untitled 4](https://user-images.githubusercontent.com/84123877/204981068-e510f684-00f4-423e-b6ff-041b888b65f7.png)
 
 ## Zabbix
 ![zabbix](https://user-images.githubusercontent.com/84123877/200781041-805cb412-bde1-4c94-9db2-d3754466b292.png)
