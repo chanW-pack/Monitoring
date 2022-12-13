@@ -1,9 +1,8 @@
 ### 1. 예비 Grafana 서버 구축 (Server1>ServerB 마이그레이션)
 
-현재 `A-service-zabbix-server(172.16.0.67)` 에 grafana가 동작 중이며, 
-예비 grafana 서버로 `B-service-zabbix-server(172.16.0.4)` 구축 진행
-
-현재 해당 서버들은 zabbix만 실행중이므로, 리소스에 여유가 있음. 모니터링 서버를 통합함으로서 유지 관리에 유용함
+현재 `A-service-zabbix-server(172.16.0.67)` 에 grafana가 동작 중이며,  
+예비 grafana 서버로 `B-service-zabbix-server(172.16.0.4)` 구축을 진행한다.  
+현재 해당 서버들은 zabbix만 실행중이므로, 리소스에 여유가 있음. 모니터링 서버를 통합함으로서 유지 관리에 원할함을 기대할 수 있다.  
 
 ![Untitled](https://user-images.githubusercontent.com/84123877/207326576-e1e77ac5-2d75-4b83-94e7-33056b6f0cba.png)
 
