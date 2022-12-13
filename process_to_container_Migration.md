@@ -32,13 +32,14 @@ table을 mysql dump로 백업 가능하다.
 
 해당 데이터 디렉터리들을 tar로 압축하고 예비 모니터링 서버로 복사(scp)한다.
 
-예비 모니터링 서버(172.16.0.4)에서는 container로 grafana를 실행하는데, docker container mount 기능을 사용하여 해당 백업 데이터를 사용하게 만든다.
+예비 모니터링 서버(172.16.0.4)에서는 container로 grafana를 실행하는데,  
+docker container mount 기능을 사용하여 해당 백업 데이터를 사용하게 만든다.
 
 ![Untitled 3](https://user-images.githubusercontent.com/84123877/207326557-0df2618c-513f-4b8c-98ed-6861c3c30981.png)
 
-마치 심볼릭 링크처럼 컨테이너에서 원하는 저장 공간만을 공유해서 데이터를 읽고 사용할 수 있는 옵션을 제공한다.
+마치 심볼릭 링크처럼 컨테이너에서 원하는 저장 공간만을 공유해서 데이터를 읽고 사용할 수 있는 옵션을 제공한다.  
 
-볼륨 생성 방법과 바인드 마운트 방법이 있는데, 본인은 후자의 방법으로 진행하였다.
+볼륨 생성 방법과 바인드 마운트 방법이 있는데, 본인은 후자의 방법으로 진행하였다.  
 
 ![Untitled 4](https://user-images.githubusercontent.com/84123877/207326561-493ed94c-c961-46c2-a83d-6ce0a5a2f81a.png)
 
