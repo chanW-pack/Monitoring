@@ -8,7 +8,7 @@ CloudWatch -> Grafana 연동, 대시보드 출력
 - [Grafana Slack 연동](https://github.com/chanW-pack/Monitoring/blob/main/Grafana%20Slack%20%EC%97%B0%EB%8F%99.md) </br>
 grafana Alerting Slack 연동(grafana 경보알람이 Slack 메세지로 발송)   
 하나의 grafana server에 여러개의 대시보드와 Contact points를 생성하였더니 충돌하는 이슈 발생 </br>
-11.08 - 해결 완료 ! </br>
+11.08 - 해결 완료: (contect point에 Custom Labels group을 지정하여 충돌 문제 해결) </br>
 - [Grafana Image Renderer](https://github.com/chanW-pack/Monitoring/blob/main/Grafana%20Image%20Renderer.md) </br>
 slack에 보내지는 경고 메세지를 커스텀마이징 </br>
 임계치를 넘은 순간의 그래프 이미지를 메세지로 같이 보내는 기능 조사(Image Rendering 기능) </br>
