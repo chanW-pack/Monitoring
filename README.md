@@ -1,7 +1,7 @@
 # Monitoring
 
 ## CloudWatch
-![grafana](https://user-images.githubusercontent.com/84123877/200781036-1395de91-65ac-48f6-abb9-f449779acc89.png)
+![cloudwatch-grafana](https://user-images.githubusercontent.com/84123877/207511350-84eaeda9-efe8-4bde-9a3c-c19358421d3d.png)
 - [CloudWatch + Grafana 모니터링 구축](https://github.com/chanW-pack/Monitoring/blob/main/CloudWatch%20%2B%20Grafana%20%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%20%EA%B5%AC%EC%B6%95.md) </br>
 cloudwatch 그라파나 연동
 
