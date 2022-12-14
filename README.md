@@ -1,22 +1,22 @@
 # Monitoring
-
+---
 ## CloudWatch
 ![cloudwatch-grafana](https://user-images.githubusercontent.com/84123877/207511350-84eaeda9-efe8-4bde-9a3c-c19358421d3d.png)
 - [CloudWatch + Grafana 모니터링 구축](https://github.com/chanW-pack/Monitoring/blob/main/CloudWatch%20%2B%20Grafana%20%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%20%EA%B5%AC%EC%B6%95.md) </br>
-cloudwatch 그라파나 연동
+CloudWatch -> Grafana 연동, 대시보드 출력
 
 - [Grafana Slack 연동](https://github.com/chanW-pack/Monitoring/blob/main/Grafana%20Slack%20%EC%97%B0%EB%8F%99.md) </br>
-grafana Alerting Slack 연동 실 적용 완료 ! </br>
-한 grafana server에 여러개의 대시보드와 Contact points를 구축하여, 충돌하는 이슈 발생 </br>
+grafana Alerting Slack 연동(grafana 경보알람이 Slack 메세지로 발송)   
+하나의 grafana server에 여러개의 대시보드와 Contact points를 생성하였더니 충돌하는 이슈 발생 </br>
 11.08 - 해결 완료 ! </br>
 - [Grafana Image Renderer](https://github.com/chanW-pack/Monitoring/blob/main/Grafana%20Image%20Renderer.md) </br>
-slack에 보내지는 경고 메세지를 커스텀마이징 하고싶음. </br>
-임계치를 넘은 순간의 그래프 이미지를 메세지로 같이 보내는 기능 조사 </br>
+slack에 보내지는 경고 메세지를 커스텀마이징 </br>
+임계치를 넘은 순간의 그래프 이미지를 메세지로 같이 보내는 기능 조사(Image Rendering 기능) </br>
 
 - [Grafana Alert Templet](https://github.com/chanW-pack/Monitoring/blob/main/Grafana%20Alert%20Templet.md)  
 grafana alert -> slack 메세지 템플릿 구현  
-및, firing/resolved 상태 구분하여 메세지 전송 (if 문)  
-![Untitled 4](https://user-images.githubusercontent.com/84123877/204981068-e510f684-00f4-423e-b6ff-041b888b65f7.png)
+추가로, firing/resolved 상태 구분하여 메세지 전송 (if 문)   
+![grafana-slack](https://user-images.githubusercontent.com/84123877/207511925-59a98426-4110-4929-905b-518f38d33eb6.png)
 
 ## Zabbix
 ![zabbix](https://user-images.githubusercontent.com/84123877/200781041-805cb412-bde1-4c94-9db2-d3754466b292.png)
@@ -31,7 +31,7 @@ Prometheus 및 Grafana, docker 활용하여 container 이미지로 구축.
 
 - [Scouter 설치 및 Agent 연동](https://github.com/chanW-pack/Monitoring/blob/main/Linux%20Scouter%20%EC%84%A4%EC%B9%98%20%EB%B0%8F%20Agent%20%EC%97%B0%EB%8F%99.md)
 
-
+---
 # 모니터링 시스템 백업 서버 구축 프로젝트
 ---
 - 이슈
