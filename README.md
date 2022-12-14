@@ -65,11 +65,11 @@ Prometheus 및 Grafana, docker 활용하여 container 이미지로 구축.
  s3에 백업 가능하지만, 현재 esxi 서버 디스크용량이 많기 때문에 esxi 서버에 백업용 서버 생성 고민  
  = esxi에 백업 서버 생성 후, NFS 로 백업 db data 저장  
  
- - [예비 Grafana 서버 구축(Server1 > Server2 마이그레이션)](https://github.com/chanW-pack/Monitoring/blob/main/process_to_container_Migration.md) 
- 기존 서버1 grafana는 프로세스로 서비스하고 있다. 이를 new grafana server에는 docker container로 마이그레이션 한다.
- - [모니터링 서버 디스크 용량 확장](https://github.com/chanW-pack/Monitoring/blob/main/Monitoring_server_disk_extend.md)
- 단순한 LVM 용량 확장이다.
- - [Monitoring Backup Server 구축](https://github.com/chanW-pack/Monitoring/blob/main/Monitoring_backup_server_set.md)
- esxi에 zabbix, grafana DB data를 저장할 백업 서버를 구축한다.
+ - [예비 Grafana 서버 구축(Server1 > Server2 마이그레이션)](https://github.com/chanW-pack/Monitoring/blob/main/process_to_container_Migration.md)   
+ 기존 서버1 grafana는 프로세스로 서비스하고 있다. 이를 new grafana server에는 docker container로 마이그레이션 한다.  
+ - [모니터링 서버 디스크 용량 확장](https://github.com/chanW-pack/Monitoring/blob/main/Monitoring_server_disk_extend.md)  
+ 단순한 LVM 용량 확장이다.  
+ - [Monitoring Backup Server 구축](https://github.com/chanW-pack/Monitoring/blob/main/Monitoring_backup_server_set.md)  
+ esxi에 zabbix, grafana DB data를 저장할 백업 서버를 구축한다.  
  ---
 
