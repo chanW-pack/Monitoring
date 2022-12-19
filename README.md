@@ -68,7 +68,8 @@ Prometheus 및 Grafana, docker 활용하여 container 이미지로 구축.
  - [예비 Grafana 서버 구축(Server1 > Server2 마이그레이션)](https://github.com/chanW-pack/Monitoring/blob/main/process_to_container_Migration.md)   
  기존 서버1 grafana는 프로세스로 서비스하고 있다. 이를 new grafana server에는 docker container로 마이그레이션 한다.  
  - [모니터링 서버 디스크 용량 확장](https://github.com/chanW-pack/Monitoring/blob/main/Monitoring_server_disk_extend.md)  
- 단순한 LVM 용량 확장이다.  
+ 단순한 LVM 용량 확장이다.
+ - [zabbix Mysql binlog 관리](https://github.com/chanW-pack/Monitoring/blob/main/Zabbix%20Binlog%20Management.md)
  - [Monitoring Backup Server 구축](https://github.com/chanW-pack/Monitoring/blob/main/Monitoring_backup_server_set.md)  
  esxi에 zabbix, grafana DB data를 저장할 백업 서버를 구축한다.  
  ---
