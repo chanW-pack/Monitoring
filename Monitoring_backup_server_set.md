@@ -52,5 +52,31 @@ df -h | grep cwNFS
 
 
 200GB의 공유 디렉터리를 생성하였고, A/B server에서 crontab으로 DB 백업 데이터를 전송하면 된다.
+```bash
+# 백업 디렉터리 생성
+mkdir -p /monitoring-bak2/data_backup/db
 
+# mysql DB 백업 스크립트 작성
+vi /home/mysql_Backup/db_backup.sh
+#! /bin/bash
+DATE=$(date +%Y%m%d%H%M%S)
+BACKUP_DIR=/monitoring-bak2/data_backup/db
+
+mysqldump -u root -pghddlr3839!  --databases zabbix  > $BACKUP_DIR"backup_"$DATE.sql
+
+# 전체 DB를 백업할 경우
+mysqldump -u root -p디비패스워드 --all-databases > $BACKUP_DIR"backup_"$DATE.sql
+
+find $BACKUP_DIR -ctime +7 -exec rm -f {} \;
+
+# crontab 스케쥴링 설정
+00 06 * * * /home/mysql_Backup/db_backup.sh
+# 매일 새벽 6시에 백업 진행
+```
+백업이 정상적으로 진행되는지 테스트한다.
+직접 스크립트 실행
+![Untitled 10](https://user-images.githubusercontent.com/84123877/208339040-0711022c-c6fd-44f7-9e73-07b8e07c5767.png)
+crontab 스케쥴링 테스트 
+![Untitled 11](https://user-images.githubusercontent.com/84123877/208339043-b851a55d-b2db-47b0-b5f6-874f0d571f88.png)
+![Untitled 12](https://user-images.githubusercontent.com/84123877/208339044-bd0f6139-5da9-4be8-a761-8476f33b5898.png)
 ---
