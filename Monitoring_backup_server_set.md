@@ -73,8 +73,9 @@ find $BACKUP_DIR -ctime +7 -exec rm -f {} \;
 00 06 * * * /home/mysql_Backup/db_backup.sh
 # 매일 새벽 6시에 백업 진행
 ```
-백업이 정상적으로 진행되는지 테스트한다.
-직접 스크립트 실행
+
+백업이 정상적으로 진행되는지 테스트한다.  
+직접 스크립트 실행  
 ![Untitled 10](https://user-images.githubusercontent.com/84123877/208339040-0711022c-c6fd-44f7-9e73-07b8e07c5767.png)
 crontab 스케쥴링 테스트 
 ![Untitled 11](https://user-images.githubusercontent.com/84123877/208339043-b851a55d-b2db-47b0-b5f6-874f0d571f88.png)
