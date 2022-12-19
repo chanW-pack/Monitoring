@@ -76,9 +76,9 @@ find $BACKUP_DIR -ctime +7 -exec rm -f {} \;
 ```
 백업이 정상적으로 진행되는지 테스트한다.  
 직접 스크립트 실행
-
 ![Untitled 10](https://user-images.githubusercontent.com/84123877/208339040-0711022c-c6fd-44f7-9e73-07b8e07c5767.png)
-crontab 
-![Untitled 11](https://user-images.githubusercontent.com/84123877/208339043-b851a55d-b2db-47b0-b5f6-874f0d571f88.png)  
-![Untitled 12](https://user-images.githubusercontent.com/84123877/208339044-bd0f6139-5da9-4be8-a761-8476f33b5898.png)  
+crontab 스케쥴링 테스트
+![Untitled 11](https://user-images.githubusercontent.com/84123877/208339043-b851a55d-b2db-47b0-b5f6-874f0d571f88.png)
+![Untitled 12](https://user-images.githubusercontent.com/84123877/208339044-bd0f6139-5da9-4be8-a761-8476f33b5898.png)
+
 ---
